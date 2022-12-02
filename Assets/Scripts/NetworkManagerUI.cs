@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Unity.Netcode;
+using System;
+using TMPro;
 
 public class NetworkManagerUI : MonoBehaviour
 {
@@ -26,5 +28,10 @@ public class NetworkManagerUI : MonoBehaviour
         {
             NetworkManager.Singleton.StartClient();
         });
+    }
+
+    private void Update()
+    {
+        //players.text = $"Players in game: {PlayerManager.Instance.PlayersInGame}";
     }
 }
